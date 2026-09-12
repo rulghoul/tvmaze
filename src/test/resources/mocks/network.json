@@ -1,0 +1,61 @@
+{
+  "id": 51006,
+  "url": "https://www.tvmaze.com/shows/51006/demon-lord-dante",
+  "name": "Demon Lord Dante",
+  "type": "Animation",
+  "language": "Japanese",
+  "genres": [
+    "Action",
+    "Anime",
+    "Horror",
+    "Supernatural"
+  ],
+  "status": "Ended",
+  "runtime": 30,
+  "averageRuntime": 30,
+  "premiered": "2002-08-31",
+  "ended": "2002-11-23",
+  "officialSite": "http://enoki-films.co.jp/pro_demonlorddante.php",
+  "schedule": {
+    "time": "09:30",
+    "days": [
+      "Saturday"
+    ]
+  },
+  "rating": {
+    "average": null
+  },
+  "weight": 65,
+  "network": {
+    "id": 167,
+    "name": "AT-X",
+    "country": {
+      "name": "Japan",
+      "code": "JP",
+      "timezone": "Asia/Tokyo"
+    },
+    "officialSite": null
+  },
+  "webChannel": null,
+  "dvdCountry": null,
+  "externals": {
+    "tvrage": null,
+    "thetvdb": 100421,
+    "imdb": "tt0421391"
+  },
+  "image": {
+    "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/276/692290.jpg",
+    "original": "https://static.tvmaze.com/uploads/images/original_untouched/276/692290.jpg"
+  },
+  "summary": "<p>While sleeping one night, Ryo Utsugi had a nightmare of monsters attacking him. One day he learns a mysterious power to let him hear voices and have visions of girls getting killed, but one night he hears the same voice.<br /> </p><p>(Source: ANN)</p>",
+  "updated": 1704793736,
+  "_links": {
+    "self": {
+      "href": "https://api.tvmaze.com/shows/51006"
+    },
+    "previousepisode": {
+      "href": "https://api.tvmaze.com/episodes/1944738",
+      "name": "Consummation"
+    }
+  }
+}

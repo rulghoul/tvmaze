@@ -1,5 +1,6 @@
 package com.ghoulrul.tvmaze.entities;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.ghoulrul.tvmaze.dto.Show;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -43,7 +44,8 @@ public class ShowMaze {
     private Image image;
     private String summary;
     private long updated;
-    private Links _links;
+    @JsonProperty("_links")
+    private Links links;
 
     // Constructor vacío (Lombok lo genera con @Data, pero es bueno saber que existe para JSON)
 
@@ -68,9 +70,7 @@ public class ShowMaze {
         return dto;
     }
 
-    // ==========================================
-    // RECORDS ANIDADOS (Implícitamente static)
-    // ==========================================
+    // Records para El objeto ShowMaze
 
     public record Channel(
             int id,

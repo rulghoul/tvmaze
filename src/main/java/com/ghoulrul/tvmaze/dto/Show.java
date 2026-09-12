@@ -44,5 +44,5 @@ public class Show {
             description = "Lista de géneros del show",
             example = "[\"Action\", \"Anime\", \"Horror\", \"Supernatural\"]"
     )
-    private List<String> genres;
+    private List<String> generes;
 }

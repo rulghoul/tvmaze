@@ -1,0 +1,616 @@
+[
+  {
+    "score": 0.6446863,
+    "show": {
+      "id": 50390,
+      "url": "https://www.tvmaze.com/shows/50390/getter-robo",
+      "name": "Getter Robo",
+      "type": "Animation",
+      "language": "Japanese",
+      "genres": [
+        "Anime",
+        "Science-Fiction"
+      ],
+      "status": "Ended",
+      "runtime": 30,
+      "averageRuntime": 30,
+      "premiered": "1974-04-04",
+      "ended": "1992-01-27",
+      "officialSite": null,
+      "schedule": {
+        "time": "",
+        "days": []
+      },
+      "rating": {
+        "average": null
+      },
+      "weight": 44,
+      "network": {
+        "id": 131,
+        "name": "Fuji TV",
+        "country": {
+          "name": "Japan",
+          "code": "JP",
+          "timezone": "Asia/Tokyo"
+        },
+        "officialSite": null
+      },
+      "webChannel": null,
+      "dvdCountry": null,
+      "externals": {
+        "tvrage": null,
+        "thetvdb": 112641,
+        "imdb": "tt0275838"
+      },
+      "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/273/683156.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/273/683156.jpg"
+      },
+      "summary": null,
+      "updated": 1600095072,
+      "_links": {
+        "self": {
+          "href": "https://api.tvmaze.com/shows/50390"
+        },
+        "previousepisode": {
+          "href": "https://api.tvmaze.com/episodes/1929778",
+          "name": "Episode 50"
+        }
+      }
+    }
+  },
+  {
+    "score": 0.5466472,
+    "show": {
+      "id": 55802,
+      "url": "https://www.tvmaze.com/shows/55802/getter-robo-arc",
+      "name": "Getter Robo Arc",
+      "type": "Animation",
+      "language": "Japanese",
+      "genres": [
+        "Anime"
+      ],
+      "status": "Ended",
+      "runtime": null,
+      "averageRuntime": null,
+      "premiered": "2021-07-04",
+      "ended": "2021-09-26",
+      "officialSite": "https://getterrobot-arc.com/",
+      "schedule": {
+        "time": "",
+        "days": [
+          "Sunday"
+        ]
+      },
+      "rating": {
+        "average": null
+      },
+      "weight": 40,
+      "network": {
+        "id": 167,
+        "name": "AT-X",
+        "country": {
+          "name": "Japan",
+          "code": "JP",
+          "timezone": "Asia/Tokyo"
+        },
+        "officialSite": null
+      },
+      "webChannel": null,
+      "dvdCountry": null,
+      "externals": {
+        "tvrage": null,
+        "thetvdb": 402005,
+        "imdb": "tt13417144"
+      },
+      "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/327/817903.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/327/817903.jpg"
+      },
+      "summary": null,
+      "updated": 1632751322,
+      "_links": {
+        "self": {
+          "href": "https://api.tvmaze.com/shows/55802"
+        },
+        "previousepisode": {
+          "href": "https://api.tvmaze.com/episodes/2149453",
+          "name": "The Never-ending Battle"
+        }
+      }
+    }
+  },
+  {
+    "score": 0.419638,
+    "show": {
+      "id": 54402,
+      "url": "https://www.tvmaze.com/shows/54402/better",
+      "name": "Better",
+      "type": "Scripted",
+      "language": "English",
+      "genres": [
+        "Drama",
+        "Crime"
+      ],
+      "status": "Ended",
+      "runtime": null,
+      "averageRuntime": 58,
+      "premiered": "2023-02-13",
+      "ended": "2023-02-13",
+      "officialSite": "https://www.bbc.co.uk/programmes/p0dvdvxq",
+      "schedule": {
+        "time": "",
+        "days": []
+      },
+      "rating": {
+        "average": 6.1
+      },
+      "weight": 89,
+      "network": null,
+      "webChannel": {
+        "id": 26,
+        "name": "BBC iPlayer",
+        "country": {
+          "name": "United Kingdom",
+          "code": "GB",
+          "timezone": "Europe/London"
+        },
+        "officialSite": "https://www.bbc.co.uk/iplayer"
+      },
+      "dvdCountry": null,
+      "externals": {
+        "tvrage": null,
+        "thetvdb": 400188,
+        "imdb": "tt14466190"
+      },
+      "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/446/1116193.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/446/1116193.jpg"
+      },
+      "summary": "<p><b>Better </b>is a thrilling redemption story set in Leeds, using the landscape of the city and surrounding countryside as a backdrop to what becomes an epic battle for one woman's soul.</p><p>After a family tragedy is narrowly averted, a corrupt police detective undergoes a painful moral awakening and decides to put right 20 years of wrongdoing - but satisfying her newfound conscience won't be straightforward. She slowly realises that her redemption will only be complete once she brings down the powerful gangster she has worked for all this time, a man she helped rise to power, and has come to love like a brother.</p>",
+      "updated": 1728232382,
+      "_links": {
+        "self": {
+          "href": "https://api.tvmaze.com/shows/54402"
+        },
+        "previousepisode": {
+          "href": "https://api.tvmaze.com/episodes/2483789",
+          "name": "Episode 5"
+        }
+      }
+    }
+  },
+  {
+    "score": 0.3774094,
+    "show": {
+      "id": 161,
+      "url": "https://www.tvmaze.com/shows/161/dexter",
+      "name": "Dexter",
+      "type": "Scripted",
+      "language": "English",
+      "genres": [
+        "Drama",
+        "Crime",
+        "Mystery"
+      ],
+      "status": "Ended",
+      "runtime": 60,
+      "averageRuntime": 60,
+      "premiered": "2006-10-01",
+      "ended": "2013-09-22",
+      "officialSite": "https://www.sho.com/dexter",
+      "schedule": {
+        "time": "21:00",
+        "days": [
+          "Sunday"
+        ]
+      },
+      "rating": {
+        "average": 8.4
+      },
+      "weight": 99,
+      "network": {
+        "id": 9,
+        "name": "Paramount+ with Showtime",
+        "country": {
+          "name": "United States",
+          "code": "US",
+          "timezone": "America/New_York"
+        },
+        "officialSite": "https://www.sho.com/"
+      },
+      "webChannel": null,
+      "dvdCountry": null,
+      "externals": {
+        "tvrage": 7926,
+        "thetvdb": 79349,
+        "imdb": "tt0773262"
+      },
+      "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/498/1246067.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/498/1246067.jpg"
+      },
+      "summary": "<p>He's smart, he's good looking, and he's got a great sense of humor. He's Dexter Morgan, everyone's favorite serial killer. As a Miami forensics expert, he spends his days solving crimes, and nights committing them. But Dexter lives by a strict code of honor that is both his saving grace and lifelong burden. Torn between his deadly compulsion and his desire for true happiness, Dexter is a man in profound conflict with the world and himself.</p>",
+      "updated": 1784283681,
+      "_links": {
+        "self": {
+          "href": "https://api.tvmaze.com/shows/161"
+        },
+        "previousepisode": {
+          "href": "https://api.tvmaze.com/episodes/11691",
+          "name": "Remember the Monsters?"
+        }
+      }
+    }
+  },
+  {
+    "score": 0.35655782,
+    "show": {
+      "id": 30509,
+      "url": "https://www.tvmaze.com/shows/30509/2gether",
+      "name": "2gether",
+      "type": "Scripted",
+      "language": "English",
+      "genres": [
+        "Comedy",
+        "Family",
+        "Music"
+      ],
+      "status": "Ended",
+      "runtime": 30,
+      "averageRuntime": 30,
+      "premiered": "2000-08-15",
+      "ended": "2001-03-19",
+      "officialSite": null,
+      "schedule": {
+        "time": "",
+        "days": [
+          "Monday"
+        ]
+      },
+      "rating": {
+        "average": null
+      },
+      "weight": 66,
+      "network": {
+        "id": 22,
+        "name": "MTV",
+        "country": {
+          "name": "United States",
+          "code": "US",
+          "timezone": "America/New_York"
+        },
+        "officialSite": null
+      },
+      "webChannel": null,
+      "dvdCountry": null,
+      "externals": {
+        "tvrage": null,
+        "thetvdb": 72062,
+        "imdb": "tt0256542"
+      },
+      "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/120/301803.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/120/301803.jpg"
+      },
+      "summary": "<p><b>2gether</b> was an American fictional boy band whose composition, songs, and formation story is a satirical approach to the boy bands of the 1990s, such as New Kids on the Block, 'N Sync and Backstreet Boys. They were part of a self-titled MTV TV movie and spin-off television series.</p>",
+      "updated": 1617287289,
+      "_links": {
+        "self": {
+          "href": "https://api.tvmaze.com/shows/30509"
+        },
+        "previousepisode": {
+          "href": "https://api.tvmaze.com/episodes/1251359",
+          "name": "Kiss"
+        }
+      }
+    }
+  },
+  {
+    "score": 0.35477805,
+    "show": {
+      "id": 6514,
+      "url": "https://www.tvmaze.com/shows/6514/better-things",
+      "name": "Better Things",
+      "type": "Scripted",
+      "language": "English",
+      "genres": [
+        "Drama",
+        "Comedy",
+        "Family"
+      ],
+      "status": "Ended",
+      "runtime": null,
+      "averageRuntime": 35,
+      "premiered": "2016-09-08",
+      "ended": "2022-04-25",
+      "officialSite": "https://www.fxnetworks.com/shows/better-things",
+      "schedule": {
+        "time": "22:00",
+        "days": [
+          "Monday"
+        ]
+      },
+      "rating": {
+        "average": 6.7
+      },
+      "weight": 98,
+      "network": {
+        "id": 13,
+        "name": "FX",
+        "country": {
+          "name": "United States",
+          "code": "US",
+          "timezone": "America/New_York"
+        },
+        "officialSite": null
+      },
+      "webChannel": null,
+      "dvdCountry": null,
+      "externals": {
+        "tvrage": null,
+        "thetvdb": 313270,
+        "imdb": "tt4370596"
+      },
+      "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/405/1013236.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/405/1013236.jpg"
+      },
+      "summary": "<p><b>Better Things</b> is a semi-autobiographical vehicle for Pamela Adlon similar to the way \"Louie\" is for CK. It centers on Sam, a working actor with no filter trying to earn a living, navigate her daughters' lives, have fun with a friend or two and also — just maybe — squeeze in some private time once in a while.</p>",
+      "updated": 1753132073,
+      "_links": {
+        "self": {
+          "href": "https://api.tvmaze.com/shows/6514"
+        },
+        "previousepisode": {
+          "href": "https://api.tvmaze.com/episodes/2280558",
+          "name": "We Are Not Alone"
+        }
+      }
+    }
+  },
+  {
+    "score": 0.3522554,
+    "show": {
+      "id": 38998,
+      "url": "https://www.tvmaze.com/shows/38998/jenter",
+      "name": "Jenter",
+      "type": "Scripted",
+      "language": "Norwegian",
+      "genres": [
+        "Drama"
+      ],
+      "status": "Ended",
+      "runtime": 20,
+      "averageRuntime": 20,
+      "premiered": "2013-02-08",
+      "ended": "2018-01-01",
+      "officialSite": "https://tv.nrk.no/serie/jenter",
+      "schedule": {
+        "time": "19:25",
+        "days": [
+          "Friday"
+        ]
+      },
+      "rating": {
+        "average": null
+      },
+      "weight": 61,
+      "network": {
+        "id": 1526,
+        "name": "NRK Super",
+        "country": {
+          "name": "Norway",
+          "code": "NO",
+          "timezone": "Europe/Oslo"
+        },
+        "officialSite": null
+      },
+      "webChannel": null,
+      "dvdCountry": null,
+      "externals": {
+        "tvrage": null,
+        "thetvdb": 317817,
+        "imdb": null
+      },
+      "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/170/425673.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/170/425673.jpg"
+      },
+      "summary": "<p>Norweigan drama in which we get to follow a group of girls from sixth to eight grade.</p>",
+      "updated": 1607888188,
+      "_links": {
+        "self": {
+          "href": "https://api.tvmaze.com/shows/38998"
+        },
+        "previousepisode": {
+          "href": "https://api.tvmaze.com/episodes/1544169",
+          "name": "Episode 5"
+        }
+      }
+    }
+  },
+  {
+    "score": 0.3492567,
+    "show": {
+      "id": 24579,
+      "url": "https://www.tvmaze.com/shows/24579/glitter",
+      "name": "Glitter",
+      "type": "Scripted",
+      "language": "English",
+      "genres": [
+        "Drama"
+      ],
+      "status": "Ended",
+      "runtime": 60,
+      "averageRuntime": 60,
+      "premiered": "1984-09-13",
+      "ended": "1985-12-27",
+      "officialSite": null,
+      "schedule": {
+        "time": "20:00",
+        "days": [
+          "Thursday"
+        ]
+      },
+      "rating": {
+        "average": null
+      },
+      "weight": 58,
+      "network": {
+        "id": 3,
+        "name": "ABC",
+        "country": {
+          "name": "United States",
+          "code": "US",
+          "timezone": "America/New_York"
+        },
+        "officialSite": "https://abc.com/"
+      },
+      "webChannel": null,
+      "dvdCountry": null,
+      "externals": {
+        "tvrage": null,
+        "thetvdb": 76672,
+        "imdb": null
+      },
+      "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/93/234800.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/93/234800.jpg"
+      },
+      "summary": "<p>The series relates incidents in the the lives of famous fictional celebrities as seen through the eyes of the reporters for <b>Glitter</b>, the hottest celebrity magazine on the newsstands.</p>",
+      "updated": 1762490413,
+      "_links": {
+        "self": {
+          "href": "https://api.tvmaze.com/shows/24579"
+        },
+        "previousepisode": {
+          "href": "https://api.tvmaze.com/episodes/1044126",
+          "name": "Suddenly Innocent"
+        }
+      }
+    }
+  },
+  {
+    "score": 0.34606582,
+    "show": {
+      "id": 5834,
+      "url": "https://www.tvmaze.com/shows/5834/better-man",
+      "name": "Better Man",
+      "type": "Scripted",
+      "language": "English",
+      "genres": [
+        "Drama"
+      ],
+      "status": "Ended",
+      "runtime": 120,
+      "averageRuntime": 120,
+      "premiered": "2013-07-25",
+      "ended": "2013-08-01",
+      "officialSite": "http://www.sbs.com.au/sbsinternational/programs/view/id/760/t/Better-Man",
+      "schedule": {
+        "time": "20:30",
+        "days": [
+          "Thursday"
+        ]
+      },
+      "rating": {
+        "average": null
+      },
+      "weight": 82,
+      "network": {
+        "id": 140,
+        "name": "SBS",
+        "country": {
+          "name": "Australia",
+          "code": "AU",
+          "timezone": "Australia/Sydney"
+        },
+        "officialSite": "https://www.sbs.com.au/"
+      },
+      "webChannel": null,
+      "dvdCountry": null,
+      "externals": {
+        "tvrage": 36905,
+        "thetvdb": 271814,
+        "imdb": "tt2381048"
+      },
+      "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/23/58037.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/23/58037.jpg"
+      },
+      "summary": "<p><b>Better Man</b> is based on the true story of Van Tuong Nguyen, a 25-year-old Vietnamese-Australian man who was arrested in Singapore, convicted of drug trafficking and sentenced with the death penalty in 2005. The series follows the story of a young man who had a tough but loving upbringing with his twin brother and devoted mother. The story culminates in an extraordinary three-year legal battle to save the life of Nguyen, led by Julian McMahon, a Melbourne lawyer, and Lex Lasry QC, a Melbourne barrister.</p>",
+      "updated": 1573580189,
+      "_links": {
+        "self": {
+          "href": "https://api.tvmaze.com/shows/5834"
+        },
+        "previousepisode": {
+          "href": "https://api.tvmaze.com/episodes/349555",
+          "name": "The Last Dance"
+        }
+      }
+    }
+  },
+  {
+    "score": 0.34168312,
+    "show": {
+      "id": 64917,
+      "url": "https://www.tvmaze.com/shows/64917/potter",
+      "name": "Potter",
+      "type": "Scripted",
+      "language": "English",
+      "genres": [
+        "Comedy"
+      ],
+      "status": "Ended",
+      "runtime": 30,
+      "averageRuntime": 30,
+      "premiered": "1979-03-01",
+      "ended": "1983-08-28",
+      "officialSite": null,
+      "schedule": {
+        "time": "",
+        "days": [
+          "Sunday"
+        ]
+      },
+      "rating": {
+        "average": null
+      },
+      "weight": 51,
+      "network": {
+        "id": 12,
+        "name": "BBC One",
+        "country": {
+          "name": "United Kingdom",
+          "code": "GB",
+          "timezone": "Europe/London"
+        },
+        "officialSite": "https://www.bbc.co.uk/bbcone"
+      },
+      "webChannel": null,
+      "dvdCountry": null,
+      "externals": {
+        "tvrage": null,
+        "thetvdb": 73052,
+        "imdb": "tt0078670"
+      },
+      "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/428/1071885.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/428/1071885.jpg"
+      },
+      "summary": "<p>The time has come for Redvers Potter to relinquish his role as head of the family confectionery firm, Pottermints - his company has been taken over and he is now going into enforced retirement. His wife, Aileen, is not too happy about having her husband under her feet either, but Potter is determined to make the most of his retirement. He decides he will give people the benefit of his managerial experience - even if they don't want it.</p>",
+      "updated": 1667178663,
+      "_links": {
+        "self": {
+          "href": "https://api.tvmaze.com/shows/64917"
+        },
+        "previousepisode": {
+          "href": "https://api.tvmaze.com/episodes/2423232",
+          "name": "Episode 7"
+        }
+      }
+    }
+  }
+]

@@ -4,6 +4,7 @@ import com.ghoulrul.tvmaze.dto.Show;
 import com.ghoulrul.tvmaze.entities.ShowMaze;
 import com.ghoulrul.tvmaze.entities.ShowMazeResultado;
 import com.ghoulrul.tvmaze.exception.MazeException;
+import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -15,11 +16,13 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 @Slf4j
 @Service
 public class TvMazeService {
-    private RestClient client  = RestClient.create();
+
+    private final RestClient client;
 
     @Value("${url.info}")
     private String infoURL;
@@ -29,7 +32,9 @@ public class TvMazeService {
 
 
     @Autowired
-    public TvMazeService(){
+    public TvMazeService(RestClient.Builder builder){
+        this.client = builder
+                .build();
     }
 
 
@@ -40,11 +45,13 @@ public class TvMazeService {
                     .uri(searchURL + busqueda)
                     .retrieve()
                     .body(ShowMazeResultado[].class);
-            var resultado = Arrays.stream(showMaze)
+            if (Objects.isNull(showMaze) || showMaze.length == 0) {
+                return List.of();
+            }
+            return Arrays.stream(showMaze)
                     .map(ShowMazeResultado::getShow)
                     .map(ShowMaze::toDto)
                     .toList();
-            return resultado;
         }catch (RestClientResponseException e){
             log.error("Fallo la recuperacion de la informacion por: {}", e.getMessage());
             if(e.getStatusCode().is4xxClientError()) {

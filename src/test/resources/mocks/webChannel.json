@@ -1,0 +1,54 @@
+{
+  "id": 66543,
+  "url": "https://www.tvmaze.com/shows/66543/bee-and-puppycat",
+  "name": "Bee and PuppyCat",
+  "type": "Animation",
+  "language": "English",
+  "genres": [
+    "Anime",
+    "Fantasy",
+    "Science-Fiction"
+  ],
+  "status": "Ended",
+  "runtime": null,
+  "averageRuntime": 26,
+  "premiered": "2022-09-06",
+  "ended": "2022-09-06",
+  "officialSite": "https://www.netflix.com/title/81245457",
+  "schedule": {
+    "time": "",
+    "days": []
+  },
+  "rating": {
+    "average": null
+  },
+  "weight": 67,
+  "network": null,
+  "webChannel": {
+    "id": 1,
+    "name": "Netflix",
+    "country": null,
+    "officialSite": "https://www.netflix.com/"
+  },
+  "dvdCountry": null,
+  "externals": {
+    "tvrage": null,
+    "thetvdb": 424185,
+    "imdb": "tt13259622"
+  },
+  "image": {
+    "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/442/1107051.jpg",
+    "original": "https://static.tvmaze.com/uploads/images/original_untouched/442/1107051.jpg"
+  },
+  "summary": "<p>On a charming magical island, the impulsive Bee and her furry pal get up to all sorts of adventures while working for an intergalactic temp agency.</p>",
+  "updated": 1762136777,
+  "_links": {
+    "self": {
+      "href": "https://api.tvmaze.com/shows/66543"
+    },
+    "previousepisode": {
+      "href": "https://api.tvmaze.com/episodes/2475595",
+      "name": "I Won't Leave You Alone"
+    }
+  }
+}
