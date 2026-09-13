@@ -1,7 +1,7 @@
 package com.ghoulrul.tvmaze.entities;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.ghoulrul.tvmaze.dto.Show;
+import com.ghoulrul.tvmaze.dto.ShowDTO;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,7 +19,7 @@ import java.util.Optional;
 @AllArgsConstructor
 public class ShowMaze {
 
-    private int id;
+    private Integer id;
     private String url;
     private String name;
     private String type;
@@ -53,12 +53,12 @@ public class ShowMaze {
      * Método de conversión a DTO integrado.
      * Centraliza la lógica de mapeo sin necesitar una tercera clase.
      */
-    public Show toDto() {
-        Show dto = new Show();
+    public ShowDTO toDto() {
+        ShowDTO dto = new ShowDTO();
         dto.setId(this.id);
         dto.setName(this.name);
         dto.setSummary(this.summary);
-        dto.setGeneres(this.genres);
+        dto.setGenres(this.genres);
 
         // Lógica inteligente para unificar network y webChannel
         String canal = Optional.ofNullable(this.network)

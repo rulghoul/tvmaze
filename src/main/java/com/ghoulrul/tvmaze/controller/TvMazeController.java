@@ -1,6 +1,6 @@
 package com.ghoulrul.tvmaze.controller;
 
-import com.ghoulrul.tvmaze.dto.Show;
+import com.ghoulrul.tvmaze.dto.ShowDTO;
 import com.ghoulrul.tvmaze.service.TvMazeService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -35,7 +35,7 @@ public class TvMazeController {
             @ApiResponse(
                     responseCode = "200",
                     description = "Lista de shows por palabra/s clave",
-                    content = @Content(mediaType = "application/json", schema = @Schema(implementation = Show.class))),
+                    content = @Content(mediaType = "application/json", schema = @Schema(implementation = ShowDTO.class))),
             @ApiResponse(
                     responseCode = "204",
                     description = "No se encontraron shows con los fase solicitada",
@@ -53,7 +53,7 @@ public class TvMazeController {
             )
     })
     @GetMapping("/busqueda/{busqueda}")
-    public ResponseEntity<List<Show>> buscaShows(
+    public ResponseEntity<List<ShowDTO>> buscaShows(
             @PathVariable String busqueda
     ){
         var resultado = mazeService.busqueda(busqueda);
@@ -69,7 +69,7 @@ public class TvMazeController {
             @ApiResponse(
                     responseCode = "200",
                     description = "Muestra informacion de un show por id",
-                    content = @Content(mediaType = "application/json", schema = @Schema(implementation = Show.class))
+                    content = @Content(mediaType = "application/json", schema = @Schema(implementation = ShowDTO.class))
             ),
             @ApiResponse(
                     responseCode = "404",
@@ -88,7 +88,7 @@ public class TvMazeController {
             )
     })
     @GetMapping("/informacion/{idShow}")
-    public ResponseEntity<Show> informacionShow(
+    public ResponseEntity<ShowDTO> informacionShow(
             @PathVariable Integer idShow
     ){
         var info = mazeService.informacion(idShow);

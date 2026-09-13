@@ -16,7 +16,7 @@ import java.util.List;
         name = "Show",
         description = "Información resumida de un show de televisión obtenido desde TVMaze"
 )
-public class Show {
+public class ShowDTO {
     @Schema(
             description = "ID único del show en TVMaze",
             example = "51006"
@@ -44,5 +44,5 @@ public class Show {
             description = "Lista de géneros del show",
             example = "[\"Action\", \"Anime\", \"Horror\", \"Supernatural\"]"
     )
-    private List<String> generes;
+    private List<String> genres;
 }
