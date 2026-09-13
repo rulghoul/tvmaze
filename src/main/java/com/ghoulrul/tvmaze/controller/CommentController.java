@@ -2,7 +2,6 @@ package com.ghoulrul.tvmaze.controller;
 
 import com.ghoulrul.tvmaze.dto.CommentDTO;
 import com.ghoulrul.tvmaze.dto.CommentRequest;
-import com.ghoulrul.tvmaze.dto.ShowDTO;
 import com.ghoulrul.tvmaze.entities.CommentMongo;
 import com.ghoulrul.tvmaze.service.CommentService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -18,7 +17,6 @@ import org.springframework.web.ErrorResponse;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.UUID;
 
 @RestController
 @RequestMapping("comment")

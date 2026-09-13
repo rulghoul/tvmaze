@@ -45,4 +45,11 @@ public class ShowDTO {
             example = "[\"Action\", \"Anime\", \"Horror\", \"Supernatural\"]"
     )
     private List<String> genres;
+
+
+    @Schema(
+            description = "Lista de géneros del show",
+            example = "[{\"comment\":\"Buen show\", \"rating\":5},{\"comment\":\"Muy predecible\", \"rating\":2}]"
+    )
+    private List<CommentDTO> comments;
 }

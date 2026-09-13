@@ -28,12 +28,12 @@ public class ShowMongo {
         this.idShow = showDTO.getId();
         this.name = showDTO.getName();
         this.channel = showDTO.getChannel();
-        this.summary = getSummary();
+        this.summary = showDTO.getSummary();
         this.genres = showDTO.getGenres();
     }
 
     public ShowDTO toDTO(){
-        return new ShowDTO(this.idShow, this.name, this.channel, this.summary, this.genres);
+        return new ShowDTO(this.idShow, this.name, this.channel, this.summary, this.genres,List.of());
     }
 }
 

@@ -1,6 +1,8 @@
 package com.ghoulrul.tvmaze.service;
 
+import com.ghoulrul.tvmaze.dto.CommentDTO;
 import com.ghoulrul.tvmaze.dto.ShowDTO;
+import com.ghoulrul.tvmaze.entities.CommentMongo;
 import com.ghoulrul.tvmaze.entities.ShowMaze;
 import com.ghoulrul.tvmaze.entities.ShowMazeResultado;
 import com.ghoulrul.tvmaze.entities.ShowMongo;
@@ -14,7 +16,6 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
 import org.springframework.web.client.RestClientResponseException;
-//import org.springframework.retry.support.RetryTemplate;
 
 import java.util.Arrays;
 import java.util.List;
@@ -29,6 +30,8 @@ public class TvMazeService {
 
     private final ShowRepository showRepository;
 
+    private final CommentService commentService;
+
     @Value("${url.info}")
     private String infoURL;
 
@@ -37,10 +40,11 @@ public class TvMazeService {
 
 
     @Autowired
-    public TvMazeService(RestClient.Builder builder, ShowRepository showRepository){
+    public TvMazeService(RestClient.Builder builder, ShowRepository showRepository,CommentService commentService){
         this.client = builder
                 .build();
         this.showRepository = showRepository;
+        this.commentService = commentService;
     }
 
 
@@ -54,9 +58,18 @@ public class TvMazeService {
             if (Objects.isNull(showMaze) || showMaze.length == 0) {
                 return List.of();
             }
+            //recupera los Id's de los shows encontrados
+            var ids =Arrays.stream(showMaze)
+                    .map(ShowMazeResultado::getShow)
+                    .map(ShowMaze::getId)
+                    .toList();
+            //Recupara los comentarios para los shows encontrados
+            var comments = commentService.obtenerPorListaDeShows(ids);
+            //Devuelve los ojetos DTO completos junto con sus comentarios
             return Arrays.stream(showMaze)
                     .map(ShowMazeResultado::getShow)
                     .map(ShowMaze::toDto)
+                    .map(show -> this.addCommentstoShowDto(show, comments))
                     .toList();
         }catch (RestClientResponseException e){
             log.error("Fallo la recuperacion de la informacion por: {}", e.getMessage());
@@ -72,7 +85,8 @@ public class TvMazeService {
             //se intenta recuperar el show desde mongo
             var mongoShow = this.getShowFromMongo(id);
             if(mongoShow.isPresent()){
-                return mongoShow.get().toDTO();
+                var show = mongoShow.get().toDTO();
+                return this.addCommentstoShowDto(show);
             }
             log.debug("Se intenta recuperar la infaormacion para el show con el ID \"{}\"", id);
             var showMaze = client.get()
@@ -81,7 +95,9 @@ public class TvMazeService {
                     .body(ShowMaze.class);
             //Guarda el objeto en mongodb a partir de la informacion de la API
             this.saveMongoShow(showMaze);
-            return showMaze.toDto();
+            var showDto = showMaze.toDto();
+            //recupera los comentarios del programa/show
+            return this.addCommentstoShowDto(showDto);
         }catch (RestClientResponseException e){
             log.error("Fallo la recuperacion de la informacion por: {}", e.getMessage());
             if(e.getStatusCode().is4xxClientError()) {
@@ -100,12 +116,33 @@ public class TvMazeService {
         }
     }
 
-    @Async
-    private void saveMongoShow(ShowMaze showMaze){
+
+    public void saveMongoShow(ShowMaze showMaze){
         try{
             showRepository.save(new ShowMongo(showMaze.toDto()));
         }catch (Exception e){
             log.error("Fallo el guardado de a mongo por: {}", e.getMessage());
         }
+    }
+
+    //Metodo para agregar comentarios para un show individual
+    private ShowDTO addCommentstoShowDto(ShowDTO showDTO){
+        //Recupera los comentarios
+        var comments = commentService.obtenerPorShow(showDTO.getId())
+                .stream().map(CommentMongo::toDto)
+                .toList();
+        //Agrega los comentarios al ShowDto
+        showDTO.setComments(comments);
+        return showDTO;
+    }
+
+    //Metodo para agregar comentarios en la busqueda de shows
+    private ShowDTO addCommentstoShowDto(ShowDTO showDTO, List<CommentMongo> comments){
+        List<CommentDTO> comentsShow = comments.stream()
+                .filter(coment -> coment.getIdShow().equals(showDTO.getId())) //Filtra solo los comentarios del Show especifico
+                .map(CommentMongo::toDto)
+                .toList();
+        showDTO.setComments(comentsShow);
+        return showDTO;
     }
 }

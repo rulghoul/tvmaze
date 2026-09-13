@@ -1,6 +1,7 @@
 package com.ghoulrul.tvmaze.service;
 
 import com.ghoulrul.tvmaze.dto.CommentRequest;
+import com.ghoulrul.tvmaze.dto.ShowDTO;
 import com.ghoulrul.tvmaze.entities.CommentMongo;
 import com.ghoulrul.tvmaze.exception.MongoAtlasException;
 import com.ghoulrul.tvmaze.repository.CommentRepository;
