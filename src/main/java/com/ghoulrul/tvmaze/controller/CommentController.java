@@ -39,9 +39,9 @@ public class CommentController {
                     content = @Content
             )
     })
-    @GetMapping("/{id}")
-    public ResponseEntity<List<CommentDTO>> getFromSingleID(@PathVariable Integer id){
-        var comments = service.obtenerPorShow(id);
+    @GetMapping("/{idShow}")
+    public ResponseEntity<List<CommentDTO>> getFromSingleID(@PathVariable Integer idShow){
+        var comments = service.obtenerPorShow(idShow);
         if(comments.isEmpty()){
             return ResponseEntity.noContent().build();
         }
