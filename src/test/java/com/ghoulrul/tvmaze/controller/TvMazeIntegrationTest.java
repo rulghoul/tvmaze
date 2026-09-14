@@ -1,15 +1,25 @@
 package com.ghoulrul.tvmaze.controller;
 
+import com.ghoulrul.tvmaze.dto.CommentRequest;
+import com.ghoulrul.tvmaze.service.CommentService;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.restclient.test.autoconfigure.AutoConfigureMockRestServiceServer;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc;
 import org.springframework.core.io.ClassPathResource;
+import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
+import org.springframework.test.context.DynamicPropertyRegistry;
+import org.springframework.test.context.DynamicPropertySource;
 import org.springframework.test.web.client.MockRestServiceServer;
 import org.springframework.test.web.servlet.MockMvc;
+import org.testcontainers.containers.MongoDBContainer;
+import org.testcontainers.junit.jupiter.Container;
+import org.testcontainers.junit.jupiter.Testcontainers;
+import org.testcontainers.utility.DockerImageName;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -21,6 +31,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+@Testcontainers
 @SpringBootTest
 @AutoConfigureMockMvc
 @AutoConfigureMockRestServiceServer
@@ -31,6 +42,33 @@ class TvMazeIntegrationTest {
 
     @Autowired
     private MockRestServiceServer mockServer;
+
+    @Autowired
+    private MongoTemplate mongoTemplate;
+
+    @Autowired
+    private CommentService service;
+
+    @Container
+    static MongoDBContainer mongoDBContainer =
+            new MongoDBContainer(DockerImageName.parse("mongo:7.0.41"));
+
+    @DynamicPropertySource
+    static void overrideProperties(DynamicPropertyRegistry registry) {
+        registry.add(
+                "spring.mongodb.uri",
+                mongoDBContainer::getReplicaSetUrl
+        );
+    }
+
+    @BeforeEach
+    void setUp() {
+        mongoTemplate.getDb().drop();
+        var request = new CommentRequest(51006,"Es un show muy bien escrito, con un ritmo impecable y actuaciones de gran calidad",5);
+        var request2 = new CommentRequest(55802,"La animacion 3d es de muy mala calidad",3);
+        service.guardarComentario(request);
+        service.guardarComentario(request2);
+    }
 
 
     @Test
@@ -47,7 +85,8 @@ class TvMazeIntegrationTest {
                 .andExpect(jsonPath("$").isArray())
                 .andExpect(jsonPath("$[0].id").value(50390))
                 .andExpect(jsonPath("$[0].name").value("Getter Robo"))
-                .andExpect(jsonPath("$[0].channel").value("Fuji TV"));
+                .andExpect(jsonPath("$[0].channel").value("Fuji TV"))
+                .andExpect(jsonPath("$[0].comments").isArray());
     }
 
     @Test
@@ -102,7 +141,9 @@ class TvMazeIntegrationTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.id").value(51006))
                 .andExpect(jsonPath("$.name").value("Demon Lord Dante"))
-                .andExpect(jsonPath("$.channel").value("AT-X"));
+                .andExpect(jsonPath("$.channel").value("AT-X"))
+                .andExpect(jsonPath("$.comments").isArray())
+                .andExpect(jsonPath("$.comments[0].rating").value(5));
     }
 
     @Test
