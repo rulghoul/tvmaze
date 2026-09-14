@@ -105,7 +105,7 @@ public class CommentController {
             )
     })
     @PostMapping("/multiple")
-    public ResponseEntity<List<CommentDTO>> saveComment(@Valid @RequestBody List<Integer> ids){
+    public ResponseEntity<List<CommentDTO>> getMultipleComents(@Valid @RequestBody List<Integer> ids){
         var comments = service.obtenerPorListaDeShows(ids);
         if(comments.isEmpty()){
             return ResponseEntity.noContent().build();
